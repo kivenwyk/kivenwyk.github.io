@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深圳市华娱互联科技有限公司 - 官方网站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .section-padding {
+            padding: 100px 0;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- 导航栏 -->
+    <header class="fixed w-full z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="bg-blue-600 text-white font-bold text-xl p-2 rounded mr-2">华娱互联</div>
+                    <span class="font-bold text-lg">Huayu Tech</span>
+                </div>
+
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link font-medium">首页</a>
+
+                    <div class="dropdown relative">
+                        <a href="#about" class="nav-link font-medium flex items-center">
+                            关于我们
+                            
+                        </a>
+                        <div class="dropdown-content absolute hidden bg-white shadow-lg rounded mt-2 w-48 py-2">
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div class="dropdown relative">
+                        <a href="#services" class="nav-link font-medium flex items-center">
+                            核心业务
+                            
+                        </a>
+                        <div class="dropdown-content absolute hidden bg-white shadow-lg rounded mt-2 w-56 py-2">
+                        
+                        </div>
+                    </div>
+
+                    <a href="#advantages" class="nav-link font-medium">核心优势</a>
+                    <a href="#contact" class="nav-link font-medium">联系我们</a>
+                </nav>
+
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 移动端导航菜单 -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="font-medium hover:text-blue-600">首页</a>
+                    <a href="#about" class="font-medium hover:text-blue-600">关于我们</a>
+                    <a href="#services" class="font-medium hover:text-blue-600">核心业务</a>
+                    <a href="#advantages" class="font-medium hover:text-blue-600">核心优势</a>
+                    <a href="#contact" class="font-medium hover:text-blue-600">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区 -->
+    <section id="home" class="hero-bg h-screen flex items-center">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-on-scroll">
+                科技赋能商业，数字连接未来<br>
+                <span class="text-blue-400 text-2xl md:text-3xl font-normal">Technology Empowers Business, Digital Connects Future</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-10 max-w-3xl mx-auto animate-on-scroll">
+                专注互联网技术及全球供应链整合，为全球客户提供一站式服务
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
+                <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    了解核心业务
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    立即咨询
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">关于我们</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 animate-on-scroll">
+                    <h3 class="text-2xl font-bold mb-4">十年积淀，成就值得信赖的合作伙伴</h3>
+                    <p class="text-gray-600 mb-4">
+                        自2013年11月15日成立以来，华娱互联科技已从一家科技贸易公司，发展成为集数字技术研发、全球供应链管理、数字营销创新于一体的现代化企业。
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        我们根植于深厚的计算机技术与互联网服务根基，业务范围覆盖技术开发、商品贸易及广告策划等多个领域。面对数字化未来，我们坚信创新是唯一途径。
+                    </p>
+                    <p class="text-gray-600">
+                        因此，我们不断将前沿技术融入各项业务，打造内部协同的生态闭环，确保为客户提供的每一项服务都具备前瞻性与竞争力。
+                    </p>
+                </div>
+
+                <div class="md:w-1/2 animate-on-scroll">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-center">我们的使命与愿景</h3>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-blue-600 pl-4 py-2">
+                                <h4 class="font-bold text-lg">我们的使命</h4>
+                                <p class="text-gray-600">以创新技术和优质资源，为客户创造可衡量的卓越价值。</p>
+                            </div>
+                            <div class="border-l-4 border-blue-600 pl-4 py-2">
+                                <h4 class="font-bold text-lg">我们的愿景</h4>
+                                <p class="text-gray-600">成为数字时代最受信赖的综合服务解决方案提供商。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心业务体系 -->
+    <section id="services" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">核心业务体系</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-6">构建驱动您增长的三驾马车，我们的三大业务板块相互赋能，形成强大的协同效应，为您提供全方位的支持。</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 业务板块1 -->
+                <div id="service1" class="business-card bg-gray-50 rounded-xl p-8 transition-all duration-300 animate-on-scroll">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">数字技术开发与服务中心</h3>
+                    <p class="text-gray-600 mb-4">
+                        专业的互联网信息技术开发、计算机系统服务与集成。提供计算机软硬件的技术开发、技术咨询、技术转让与技术服务，助力您的技术升级与创新。
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>互联网信息技术开发</li>
+                        <li>计算机系统服务与集成</li>
+                        <li>软件技术咨询与转让</li>
+                    </ul>
+                </div>
+
+                <!-- 业务板块2 -->
+                <div id="service2" class="business-card bg-gray-50 rounded-xl p-8 transition-all duration-300 animate-on-scroll">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">全球商品供应链中心</h3>
+                    <p class="text-gray-600 mb-4">
+                        整合全球资源，专业销售电子产品、家用电器、工艺品、体育户外用品、服装鞋帽、办公用品等数十个品类，是您可靠的一站式采购伙伴。
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>全品类供应链整合</li>
+                        <li>一站式采购服务</li>
+                        <li>进出口贸易流通</li>
+                    </ul>
+                </div>
+
+                <!-- 业务板块3 -->
+                <div id="service3" class="business-card bg-gray-50 rounded-xl p-8 transition-all duration-300 animate-on-scroll">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">战略增长引擎</h3>
+                    <p class="text-gray-600 mb-4">
+                        将自身成功的数字转型经验提炼为"数字营销解决方案"，旨在成为企业的外部增长引擎。
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>定制化数字战略</li>
+                        <li>全渠道整合执行</li>
+                        <li>技术驱动的效果保障</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="advantages" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">我们的核心优势</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center animate-on-scroll">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">经验与资历</h3>
+                    <p class="text-gray-600">超过十年行业深耕，具备深厚的技术积淀与丰富的贸易经验。</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center animate-on-scroll">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sync-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">生态与协同</h3>
+                    <p class="text-gray-600">"技术+贸易+营销"的独特业务生态，产生1+1>2的协同价值。</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center animate-on-scroll">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-network-wired text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">资源与网络</h3>
+                    <p class="text-gray-600">庞大的供应链资源与全球贸易网络，确保快速响应与稳定交付。</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center animate-on-scroll">
+                    <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">创新与前瞻</h3>
+                    <p class="text-gray-600">始终关注前沿技术，以数字化策略为核心，引领客户拥抱未来。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">联系我们</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">携手共创未来，无论您需要领先的技术支持、稳定的产品供应，或是渴望实现品牌的数字化飞跃，华娱互联科技都将是您值得信赖的战略伙伴。</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 animate-on-scroll">
+                    <div class="bg-gray-50 rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-6">公司信息</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">地址</h4>
+                                    <p class="text-gray-600">深圳市南山区留仙大道4168号众冠时代广场A座1703A</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">业务热线</h4>
+                                    <p class="text-gray-600">18218811125</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-blue-600 text-xl mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">合作邮箱</h4>
+                                    <p class="text-gray-600">liuqinyu@plantim.green</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="font-bold text-lg mb-4">关注我们</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                    <i class="fab fa-wechat"></i>
+                                </a>
+                                <a href="#" class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                    <i class="fab fa-weibo"></i>
+                                </a>
+                                <a href="#" class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 animate-on-scroll">
+                    <div class="bg-gray-50 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">发送消息</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="name">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="请输入您的姓名">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="email">邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="请输入您的邮箱">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="subject">主题</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="请输入主题">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="message">消息</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="请输入您的消息"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                发送消息
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="bg-blue-600 text-white font-bold text-xl p-2 rounded mr-2">华娱互联</div>
+                        <span class="font-bold text-lg">Huayu Tech</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">科技赋能商业，数字连接未来</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#home" class="hover:text-blue-400 transition">首页</a>
+                    <a href="#about" class="hover:text-blue-400 transition">关于我们</a>
+                    <a href="#services" class="hover:text-blue-400 transition">核心业务</a>
+                    <a href="#contact" class="hover:text-blue-400 transition">联系我们</a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 深圳市华娱互联科技有限公司. 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+        
+        // 滚动动画
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+
+</html>
